@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var arr = ["1","2","s","s","w","4","1","2","g","s","z","d","d","z","ss","e"]
+	// 第一种去重方法
+		function del(arr){
+			var brr = []
+			for(var i = 0;i<arr.length;i++){
+
+				if(brr.indexOf(arr[i])==-1){
+					brr.push(arr[i])
+				}
+			}
+			return brr
+		}
+		console.log(del(arr))
+	// 第二种去重方法
+	function  del2(arr){
+		for(var i = 0;i<arr.length;i++){
+			for(var j = i+1;j<arr.length;j++){
+				if(arr[i]==arr[j]){
+					arr.splice(j,1)
+				}
+			}
+		}
+		return arr
+	}
+	console.log(del2(arr))
+	</script>
+</body>
+</html>
