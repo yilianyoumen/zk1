@@ -31,6 +31,18 @@
 		return arr
 	}
 	console.log(del2(arr))
+	// 第三种去重方式
+	function del3(arr){
+		var brr = []
+			for(var i = 0;i<arr.length;i++){
+
+				if(brr.indexOf(arr[i])==-1){
+					brr.unshift(arr[i])
+				}
+			}
+			return brr
+	}
+	console.log(del3(arr))
 	</script>
 </body>
 </html>
